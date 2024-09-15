@@ -1,0 +1,34 @@
+Browser sends a pre-flight request
+It sends Access-Control-Allow-Origin
+and the method like GET,POST,PUT,DELETE
+
+In the server we need to enable CORS
+and we need to enable Access Control Allow Origin and Access-Control-Allow-method
+All of this is done in the pre-flight request.
+
+ACCESS CONTROL ALLOW ORIGIN
+ACCESS CONTROL ALLOW METHOD
+
+The above headers are required only when we send
+the requests in the browser via HTTP
+
+HTTP Request Headers have the following:
+1. METHOD TYPE: GET/POST/PUT/DELETE
+2. Host info
+3. User-Agent: browser/curl etc
+4. ACCEPT */*
+
+HTTP Response Headers have the following details:
+1. HTTP Status code 200/301/401 etc
+2. location
+3. Content-Type: text/html
+4. Cookie with Expires Date
+5. Cache-Control: public max-Agent
+6. Content Length
+7. Security Headers like
+X-XSS-Protection
+X-Frame-Options: SAME ORIGIN
+
+
+
+
