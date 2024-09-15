@@ -16,8 +16,9 @@ function getData(){
 const myDebounce = (callback,timeout)=>{
     let timer;
     return  function(...args){
+        //if a setTimeout already exists, clear it first then create a new setTimeout
         if(timer) clearTimeout(timer);
-        setTimeout(()=>{
+        timer = setTimeout(()=>{
             //Call the required function after a specific interval
             callback();
         },timeout)
